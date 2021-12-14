@@ -7,7 +7,7 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-8 col-md-10 mx-auto">
-            <div class="page-heading">
+            <div style="color: white;" class="page-heading">
               <h1>Contact Me</h1>
               <span class="subheading">Have questions? I have answers.</span>
             </div>
@@ -15,6 +15,19 @@
         </div>
       </div>
     </header>
+
+    {% with messages = get_flashed_messages(with_categories = true) %}
+    {% if messages %}
+    {% for category, message in messages %}
+    <div style="background-color: #d1e7dd" class="alert alert-{{category}} alert-dismissible fade show" role="alert">
+      {{message}}
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    {% endfor %}
+    {% endif %}
+    {% endwith %}
 
     <!-- Main Content -->
     <div class="container">

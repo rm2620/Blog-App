@@ -1,7 +1,7 @@
 ## For Virtual environment
 # Set-ExecutionPolicy Unrestricted -Scope Process 
 
-from flask import Flask, render_template, request, redirect, session
+from flask import Flask, render_template, request, redirect, session, flash
 from flask_sqlalchemy import SQLAlchemy
 from flask_mail import Mail
 import json
@@ -168,7 +168,7 @@ def contact():
                           recipients = [params['gmail-user']],
                           body = message + "\n" + phone
                           )
-    
+        flash("Thanks for submitting your details, We will get back to you soon!!")
     return render_template("contact.html", params=params)
 
 @app.route("/post/<string:post_slug>", methods=['GET'])
