@@ -1,0 +1,15 @@
+{
+    "params":
+    {
+        "local_server": "True",
+        "local_uri": "mysql://root:@localhost/codingthunders",
+        "prod_uri": "mysql://root:@localhost/codingthunders",
+        "gmail-user": "your-email@gmail.com",
+        "gmail-password": "gmailPassword",
+        "no_of_posts": 2,
+        "admin_username": "Rishabh",
+        "admin_password": "Flask",
+        "upload_location": "C:\\Users\\Rishabh Mittal\\OneDrive\\Desktop\\Flask-2\\static"
+
+    }
+}
